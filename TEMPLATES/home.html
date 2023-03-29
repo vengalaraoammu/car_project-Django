@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+   body {
+  background-color: lightblue;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+    div{
+      width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+  background-color: azure;
+  background-image:"https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Thar/8076/1601635839903/front-left-side-47.jpg?imwidth=420&impolicy=resize" ;
+}
+h3{
+    font-size: 30px;
+    padding-left: 75px;
+    color:palevioletred;
+}
+a{
+  font-size: 30px;
+}
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  border-right-width: 4px;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: black;
+  color: white;
+}
+p{
+  color: blueviolet;
+  padding-left: 75px;
+  font-size: 25px;
+}
+
+  </style>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="static/style.css">
+  <title>Car Brands</title>
+</head>
+
+<body>
+  <h3>Car Brands</h3>
+  <p id="currentTime"></p>
+  <a href="admin/logout/">logout</a></br></br>
+  <div class="home-car">
+    <a href="/hyundai">Hyundai</a></br></br>
+    <a href="/Maruti">Maruti</a></br></br>
+    <a href="/Tata">Tata</a></br></br>
+    <a href="/mahindra">mahindra</a></br></br>
+  </div>
+
+<script>
+  function showTime() {
+document.getElementById('currentTime').innerHTML = new Date().toString();
+}
+  showTime();
+  setInterval(function () {
+  showTime();
+}, 1000);
+</script>
+
+</body>
+
+</html>

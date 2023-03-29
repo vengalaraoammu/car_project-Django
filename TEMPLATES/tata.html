@@ -1,0 +1,23 @@
+<html lang="en">
+    <style>
+        body {background-color: powderblue;}
+        h1   {color: blue;}
+        p    {color: red;}
+        .border-bottom-white-smoke {
+              border-bottom: 1px solid #f0f0f0;}
+        </style>
+
+<h1 class="text-center text-success">Tata car</h1>
+{% for t in mylist2 %}
+          <div class="border-bottom-white-smoke" align="center">
+          <div class="gallery">
+              <a target="_blank" href="{{t.0}}">Car Name:<b class="text-primary">{{t.2}}</b><br>
+                <img src="{{t.3}}" alt="Cinque Terre" >
+              </a><br>
+              <i> price:<b>{{t.1}}</b> </i>
+            </div>
+          </div>
+          {% endfor %}
+
+    
+</html>

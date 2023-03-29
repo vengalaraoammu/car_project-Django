@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    body{
+    background-color: aliceblue;
+  }
+   form {
+  width: 300px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 25px;
+  margin-right: 130px;;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.button {
+  padding: 10px;
+  border: 1px solid gray;
+  background-color:#B4886B;
+  border-radius: 5px;
+  font: inherit;
+}
+.button:focus {
+  outline: 2px solid gray;
+  font-weight: bold;
+  color: white;
+}
+
+
+  </style>
+  
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+</head>
+
+<body>
+  <form method="post">
+    {% csrf_token %}
+    <label for="username">Username:</label><br>
+    <input type="text" name="username" required><br><br>
+    <label for="password1">Password:</label><br>
+    <input type="password" name="password1" required><br><br>
+    <label for="password2">Password confirmation:</label><br>
+    <input type="password" name="password2" required><br><br>
+    <label for="email">Email address:</label><br>
+    <input type="email" name="email" required><br><br>
+    <input type="submit" value="Register">
+  </form>
+  
+      
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .product {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.product .details {
+  flex: 1;
+}
+
+.product .name {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #212121;
+  text-decoration: none;
+}
+
+.product .name:hover {
+  text-decoration: underline;
+}
+
+.price-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.discount-price {
+  font-size: 24px;
+  font-weight: 500;
+  color: #e65100;
+  margin-right: 10px;
+}
+
+.original-price {
+  font-size: 14px;
+  color: #878787;
+  text-decoration: none;
+}
+
+.discount {
+  font-size: 12px;
+  font-weight: 500;
+  color: #388e3c;
+  margin-left: 5px;
+}
+
+
+        </style>
+
+<h1 class="text-center text-success">Hyundai Bikes</h1>
+{% for i in mylist %}
+          <!-- <div class="border-bottom-white-smoke" align="center">
+          <div class="gallery">
+              <a target="_blank" href="{{i.0}}">Car Name:<b class="text-primary">{{i.2}}</b><br>
+                <img src="{{i.3}}" alt="Cinque Terre" >
+              </a><br>
+              <i> price:<b>{{i.1}}</b> </i>
+            </div>
+          </div> -->
+
+          <div class="product">
+            <a target="_blank" href="{{i.0}}" title="Product Name">
+              <img src="{{i.3}}" alt="Product Image">
+            </a>
+            <div class="details">
+              <a href="{{i.0}}" title="Product Name">
+                <h3 class="name">{{i.2}}</h3>
+              </a>
+                <div class="original-price">
+                  <span class="currency">₹</span>
+                  <span class="price">{{i.1}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+
+          {% endfor %}
+
+    
+</html>
